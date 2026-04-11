@@ -40,9 +40,9 @@ No frameworks, no bundlers, no build tools beyond Node.js.
 
 ### Templates
 
-Three template types, selected by frontmatter `type`:
+Five template types, selected by frontmatter `type`:
 
-#### 1. Character Template (`type: pc` or `type: npc`)
+#### 1. PC Template (`type: pc`)
 
 Interactive mobile-first character sheet with:
 - Always-visible header card (name, concept, point total, player)
@@ -52,9 +52,35 @@ Interactive mobile-first character sheet with:
 - Expandable cards for skill chains and UW maneuvers
 - Monospace font for stat values
 
-Applied to files in `Characters/PCs/` and `Characters/NPCs/`.
+Applied to files in `Characters/PCs/`.
 
-#### 2. Wiki Template (all other entity types)
+#### 2. NPC Template (`type: npc`)
+
+Structured NPC reference page, lighter than a full PC sheet:
+- Header card (name, role/occupation, status, nationality)
+- Summary section always visible
+- Collapsible sections for: Description, Personality, Background, What They Provide / Capabilities, What They Won't Do / Limitations
+- Quick stats block (attributes and key skills in a compact table, not full accordion breakdown)
+- Contact stats block if the NPC is a Contact (skill, frequency, reliability, cost)
+- Relationships rendered from frontmatter
+- Stub badge and "Needs Development" box if `canon_status: STUB`
+
+Applied to files in `Characters/NPCs/`. Designed so new NPCs added to the vault render cleanly with minimal structured content — a name, summary, and quick stats are enough for a useful page.
+
+#### 3. Location Template (`type: location`)
+
+Place reference page for campaign locations:
+- Header card (name, location type, parent location, atmosphere)
+- Summary/description section always visible
+- Collapsible sections for: Details, Security, Notable Features, Inhabitants/Occupants
+- Frontmatter fields rendered as metadata badges: `location_type`, `security_level`, `atmosphere`
+- Parent location linked via `parent_location` frontmatter field (breadcrumb: "The Compound > Main Building > Armoury")
+- Relationships rendered from frontmatter (who is `located_at` here, what is `headquartered_at` here)
+- Stub badge and "Needs Development" box if `canon_status: STUB`
+
+Applied to files in `Locations/`. No locations exist yet, but the template is ready for when the campaign introduces them.
+
+#### 4. Wiki Template (all other entity types)
 
 Clean prose layout with:
 - Maritime colour scheme
@@ -63,9 +89,9 @@ Clean prose layout with:
 - Cross-links between entities via wiki-link resolution
 - Responsive readable prose
 
-Applied to: events, factions, organizations, locations, items, documents, clues, campaign overview, timeline.
+Applied to: events, factions, organizations, items, documents, clues, campaign overview, timeline.
 
-#### 3. Index Template
+#### 5. Index Template
 
 Auto-generated directory pages for each folder:
 - Cards listing each entity with name, type/role summary, and link
