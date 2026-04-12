@@ -1,6 +1,7 @@
 {
   "vaultPath": "/Users/antonypegg/Documents/specialforces_vault",
   "outputDir": "./docs",
+  "attachmentsDir": "_attachments",
   "siteTitle": "GURPS Special Forces",
   "siteUrl": "https://antthelimey.github.io/gurps-special-forces",
   "excludeDirs": ["_meta", "_Templates", "_resources", ".obsidian", ".smart-env", "node_modules", "GURPS Special Forces"],

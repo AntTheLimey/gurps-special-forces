@@ -671,6 +671,38 @@ td .stat {
   }
 }
 
+/* ===== PORTRAITS ===== */
+.char-header .portrait {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+.portrait {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin: 0.5rem 0 1rem;
+}
+.content > .portrait,
+.page-title + .portrait {
+  max-width: 28rem;
+}
+
+/* Inline body images */
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin: 0.75rem 0;
+}
+
 /* ===== PRINT ===== */
 @media print {
   .site-header,

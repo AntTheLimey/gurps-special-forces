@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { scanVault, buildLinkMap } = require('./lib/scanner');
+const { scanVault, buildLinkMap, scanAttachments } = require('./lib/scanner');
 const { processContent, extractSections, filterSections, stripDataview } = require('./lib/processor');
 const { generateNav, pcTemplate, npcTemplate, locationTemplate, wikiTemplate, indexTemplate, landingTemplate, DIR_LABELS } = require('./lib/templates');
 
@@ -34,6 +34,15 @@ function writeNoJekyll() {
   fs.writeFileSync(path.join(outputDir, '.nojekyll'), '');
 }
 
+function copyImages(imageMap) {
+  for (const entry of Object.values(imageMap)) {
+    const dest = path.join(outputDir, 'images', entry.relPath);
+    ensureDir(dest);
+    fs.copyFileSync(entry.sourcePath, dest);
+  }
+  console.log(`Copied ${Object.keys(imageMap).length} images`);
+}
+
 function main() {
   console.log('Scanning vault:', config.vaultPath);
   const pages = scanVault(config);
@@ -42,8 +51,12 @@ function main() {
   const linkMap = buildLinkMap(pages);
   console.log(`Built link map with ${Object.keys(linkMap).length} entries`);
 
+  const imageMap = scanAttachments(config);
+  console.log(`Found ${Object.keys(imageMap).length} image files`);
+
   cleanOutput();
   copyCSS();
+  copyImages(imageMap);
   writeNoJekyll();
 
   const navFor = generateNav(pages);
@@ -52,7 +65,7 @@ function main() {
   let errorCount = 0;
   for (const page of pages) {
     try {
-      const processed = processContent(page, linkMap, config.excludeSections);
+      const processed = processContent(page, linkMap, config.excludeSections, imageMap);
       let html;
 
       switch (page.frontmatter.type) {
@@ -60,17 +73,17 @@ function main() {
           let filtered = stripDataview(page.markdown);
           filtered = filterSections(filtered, config.excludeSections);
           const sections = extractSections(filtered);
-          html = pcTemplate(page, processed, sections, navFor, config);
+          html = pcTemplate(page, processed, sections, navFor, config, imageMap);
           break;
         }
         case 'npc':
-          html = npcTemplate(page, processed, navFor, config);
+          html = npcTemplate(page, processed, navFor, config, imageMap);
           break;
         case 'location':
-          html = locationTemplate(page, processed, navFor, config);
+          html = locationTemplate(page, processed, navFor, config, imageMap);
           break;
         default:
-          html = wikiTemplate(page, processed, navFor, config);
+          html = wikiTemplate(page, processed, navFor, config, imageMap);
       }
 
       const outPath = path.join(outputDir, page.outputPath);
