@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factions &amp; Organisations — GURPS Special Forces</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <button class="menu-toggle" onclick="document.getElementById('nav').classList.add('open')" aria-label="Menu">&#9776;</button>
+  <h1><a href="../index.html">GURPS Special Forces</a></h1>
+</header>
+
+<nav id="nav" class="site-nav">
+  <button class="nav-close" onclick="document.getElementById('nav').classList.remove('open')" aria-label="Close">&times;</button>
+  <h2>Campaign</h2>
+<ul>
+<li><a href="../campaign/campaign-overview.html">Campaign Overview</a></li>
+<li><a href="../campaign/player-characters.html">Player Characters</a></li>
+<li><a href="../campaign/timeline.html">Timeline</a></li>
+</ul>
+<h2>Player Characters</h2>
+<ul>
+<li><a href="../characters/pcs/guy-lefleur.html">Guy LeFleur</a></li>
+<li><a href="../characters/pcs/jens-hartmann.html">Jens Hartmann</a></li>
+<li><a href="../characters/pcs/ronnie-vint.html">Ronnie Vint</a></li>
+</ul>
+<h2>NPCs</h2>
+<ul>
+<li><a href="../characters/npcs/adrian-voss.html">Adrian Voss</a></li>
+<li><a href="../characters/npcs/dave-crockett.html">Dave Crockett</a></li>
+<li><a href="../characters/npcs/dr-elaine-porter.html">Dr. Elaine Porter</a></li>
+<li><a href="../characters/npcs/jordan-hale.html">Jordan Hale</a></li>
+</ul>
+<h2>Factions &amp; Organisations</h2>
+<ul>
+<li><a href="nasa.html">NASA</a></li>
+<li><a href="nato.html">NATO</a></li>
+<li><a href="the-defense-contractor.html">The Defense Contractor</a></li>
+<li><a href="voss-dynamics.html">Voss Dynamics</a></li>
+</ul>
+<h2>Events</h2>
+<ul>
+<li><a href="../events/the-meteor-event.html">The Meteor Event</a></li>
+</ul>
+<h2>Documents</h2>
+<ul>
+<li><a href="../documents/national-daily-2019-03-18-mystery-meteor.html">National Daily - 2019-03-18 - Mystery Meteor</a></li>
+</ul>
+
+</nav>
+
+<main class="content">
+<h1 class="page-title">Factions &amp; Organisations</h1>
+<div class="roster">
+<div class="roster-card">
+  <h3><a href="nasa.html">NASA</a> <span class="stub-badge">Stub</span></h3>
+  <div class="role">government</div>
+</div>
+
+<div class="roster-card">
+  <h3><a href="nato.html">NATO</a> <span class="stub-badge">Stub</span></h3>
+  <div class="role">military</div>
+</div>
+
+<div class="roster-card">
+  <h3><a href="the-defense-contractor.html">The Defense Contractor</a></h3>
+  <div class="role">organization</div>
+</div>
+
+<div class="roster-card">
+  <h3><a href="voss-dynamics.html">Voss Dynamics</a></h3>
+  <div class="role">corporation</div>
+</div></div>
+</main>
+
+<footer class="site-footer">
+  GURPS is a trademark of Steve Jackson Games. Fan creation for personal use. GURPS 4th Edition.
+</footer>
+
+<script>
+document.querySelectorAll('.site-nav a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('nav').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

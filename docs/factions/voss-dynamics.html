@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voss Dynamics — GURPS Special Forces</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <button class="menu-toggle" onclick="document.getElementById('nav').classList.add('open')" aria-label="Menu">&#9776;</button>
+  <h1><a href="../index.html">GURPS Special Forces</a></h1>
+</header>
+
+<nav id="nav" class="site-nav">
+  <button class="nav-close" onclick="document.getElementById('nav').classList.remove('open')" aria-label="Close">&times;</button>
+  <h2>Campaign</h2>
+<ul>
+<li><a href="../campaign/campaign-overview.html">Campaign Overview</a></li>
+<li><a href="../campaign/player-characters.html">Player Characters</a></li>
+<li><a href="../campaign/timeline.html">Timeline</a></li>
+</ul>
+<h2>Player Characters</h2>
+<ul>
+<li><a href="../characters/pcs/guy-lefleur.html">Guy LeFleur</a></li>
+<li><a href="../characters/pcs/jens-hartmann.html">Jens Hartmann</a></li>
+<li><a href="../characters/pcs/ronnie-vint.html">Ronnie Vint</a></li>
+</ul>
+<h2>NPCs</h2>
+<ul>
+<li><a href="../characters/npcs/adrian-voss.html">Adrian Voss</a></li>
+<li><a href="../characters/npcs/dave-crockett.html">Dave Crockett</a></li>
+<li><a href="../characters/npcs/dr-elaine-porter.html">Dr. Elaine Porter</a></li>
+<li><a href="../characters/npcs/jordan-hale.html">Jordan Hale</a></li>
+</ul>
+<h2>Factions &amp; Organisations</h2>
+<ul>
+<li><a href="nasa.html">NASA</a></li>
+<li><a href="nato.html">NATO</a></li>
+<li><a href="the-defense-contractor.html">The Defense Contractor</a></li>
+<li><a href="voss-dynamics.html">Voss Dynamics</a></li>
+</ul>
+<h2>Events</h2>
+<ul>
+<li><a href="../events/the-meteor-event.html">The Meteor Event</a></li>
+</ul>
+<h2>Documents</h2>
+<ul>
+<li><a href="../documents/national-daily-2019-03-18-mystery-meteor.html">National Daily - 2019-03-18 - Mystery Meteor</a></li>
+</ul>
+
+</nav>
+
+<main class="content">
+<h1 class="page-title">Voss Dynamics</h1>
+<div class="metadata-badges"><span class="metadata-badge">corporation</span></div>
+<h1>Voss Dynamics</h1>
+<h2>Summary</h2>
+<p>Voss Dynamics is the private defense contractor the PCs have been assigned to. Led by CEO <a href="../characters/npcs/adrian-voss.html">Adrian Voss</a>, the company is known for advanced energy systems and experimental technologies. In March 2019, they secured a major federal contract to investigate <a href="../events/the-meteor-event.html">the meteor</a> and develop countermeasures against fragment-empowered individuals.</p>
+<p>NATO nations have assigned their elite special operators — including <a href="../characters/pcs/ronnie-vint.html">Ronnie Vint</a> — to Voss Dynamics to be trained and equipped with experimental TL9+ technology for anti-fragment operations.</p>
+<h2>Known Activities</h2>
+<ul>
+<li>Advanced energy systems research (pre-meteor history)</li>
+<li>Experimental technology development</li>
+<li>Federal contract for meteor fragment investigation (as of 2019-03-18)</li>
+<li>Developing counter-fragment technology (TL9+ experimental gear)</li>
+<li>Integrating NATO special operators into anti-fragment teams</li>
+</ul>
+<h2>Public Profile</h2>
+<p>Market analyst <a href="../characters/npcs/jordan-hale.html">Jordan Hale</a> noted: <em>“Whenever there’s a situation involving unknown energy or materials, Voss Dynamics tends to be at the center of it.”</em> This implies a pattern of involvement with exotic or unknown materials — the meteor contract is not their first rodeo.</p>
+<h2>Resources &amp; Capabilities</h2>
+<ul>
+<li>Access to NATO special operations personnel</li>
+<li>Experimental technology (TL8 modern with TL9+ elements)</li>
+<li>Government funding and backing from multiple NATO nations</li>
+<li>Prior experience with exotic materials and unknown energy sources</li>
+</ul>
+<h2>Open Questions</h2>
+<ul>
+<li>Where is their primary facility / HQ?</li>
+<li>What specific tech have they developed from the fragments so far?</li>
+<li>What other “high-risk, cutting-edge research” have they done previously?</li>
+<li>What are their true corporate motivations beyond the contract? Are they trustworthy?</li>
+<li>Who are the key personnel we’ll interact with (handlers, scientists, trainers)?</li>
+</ul>
+<h2>Appearances</h2>
+<ul>
+<li><a href="../documents/national-daily-2019-03-18-mystery-meteor.html">National Daily - 2019-03-18 - Mystery Meteor</a></li>
+</ul>
+
+<h2>Relationships</h2>
+<ul class="relationship-list">
+<li><a href="../characters/npcs/adrian-voss.html" class="entity-link">Adrian Voss</a> <span class="rel-type">led by</span> &mdash; Adrian Voss is CEO of Voss Dynamics</li>
+<li><a href="../events/the-meteor-event.html" class="entity-link">The Meteor Event</a> <span class="rel-type">investigates</span> &mdash; Secured federal contract to investigate the meteor</li>
+<li><a href="nato.html" class="entity-link">NATO</a> <span class="rel-type">supplies</span> &mdash; Contracted by NATO nations to develop counter-fragment technology and integrate special operators</li>
+<li><a href="../characters/pcs/ronnie-vint.html" class="entity-link">Ronnie Vint</a> <span class="rel-type">employs</span> &mdash; Ronnie is assigned to Voss Dynamics as part of the NATO operator program</li>
+</ul>
+</main>
+
+<footer class="site-footer">
+  GURPS is a trademark of Steve Jackson Games. Fan creation for personal use. GURPS 4th Edition.
+</footer>
+
+<script>
+document.querySelectorAll('.site-nav a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('nav').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>
