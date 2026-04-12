@@ -644,11 +644,15 @@ td .stat {
 .relationship-list li:last-child {
   border-bottom: none;
 }
-.relationship-list .rel-type {
-  font-family: var(--mono);
-  font-size: 0.8rem;
+.relationship-list .rel-label {
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 0.3rem;
+}
+.relationship-list .rel-label::after {
+  content: ":";
   color: var(--text-muted);
-  margin-left: 0.5rem;
+  font-weight: 400;
 }
 
 /* ===== RESPONSIVE ===== */

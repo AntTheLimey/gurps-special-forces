@@ -4,7 +4,7 @@
   "siteTitle": "GURPS Special Forces",
   "siteUrl": "https://antthelimey.github.io/gurps-special-forces",
   "excludeDirs": ["_meta", "_Templates", "_resources", ".obsidian", ".smart-env", "node_modules", "GURPS Special Forces"],
-  "excludeSections": ["Player Notes", "Source References"],
+  "excludeSections": ["Player Notes", "Source References", "Relationships"],
   "folderMap": {
     "_Campaign": "campaign",
     "Characters/PCs": "characters/pcs",
