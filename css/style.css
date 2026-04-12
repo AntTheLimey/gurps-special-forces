@@ -573,13 +573,13 @@ td .stat {
   padding: 0.5rem 0.75rem;
   text-align: center;
 }
-.quick-stats .stat-item .label {
+.quick-stats .stat-item .stat-label {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
 }
-.quick-stats .stat-item .value {
+.quick-stats .stat-item .stat-value {
   font-family: var(--mono);
   font-weight: 700;
   font-size: 1.1rem;
@@ -640,6 +640,9 @@ td .stat {
   padding: 0.4rem 0;
   border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
+}
+.relationship-list li:last-child {
+  border-bottom: none;
 }
 .relationship-list .rel-type {
   font-family: var(--mono);
