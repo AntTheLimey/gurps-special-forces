@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { scanVault, buildLinkMap } = require('./lib/scanner');
 const { processContent, extractSections, filterSections, stripDataview } = require('./lib/processor');
-const { generateNav, pcTemplate, npcTemplate, locationTemplate, wikiTemplate, indexTemplate, landingTemplate } = require('./lib/templates');
+const { generateNav, pcTemplate, npcTemplate, locationTemplate, wikiTemplate, indexTemplate, landingTemplate, DIR_LABELS } = require('./lib/templates');
 
-const config = require('./vault.config.json');
-const outputDir = path.resolve(config.outputDir);
+const config = require(path.join(__dirname, 'vault.config.json'));
+const outputDir = path.resolve(__dirname, config.outputDir);
 
 // Clean output dir but preserve specs/plans subdirectory
 function cleanOutput() {
@@ -24,7 +24,7 @@ function ensureDir(filePath) {
 }
 
 function copyCSS() {
-  const src = path.resolve('css/style.css');
+  const src = path.join(__dirname, 'css/style.css');
   const dest = path.join(outputDir, 'css/style.css');
   ensureDir(dest);
   fs.copyFileSync(src, dest);
@@ -85,20 +85,7 @@ function main() {
     dirs[dir].push(page);
   }
 
-  const dirLabels = {
-    'campaign': 'Campaign',
-    'characters/pcs': 'Player Characters',
-    'characters/npcs': 'NPCs',
-    'factions': 'Factions & Organisations',
-    'events': 'Events',
-    'locations': 'Locations',
-    'items': 'Items & Artifacts',
-    'documents': 'Documents',
-    'clues': 'Clues',
-    'chapters': 'Chapters',
-  };
-
-  for (const [dir, label] of Object.entries(dirLabels)) {
+  for (const [dir, label] of Object.entries(DIR_LABELS)) {
     const dirPages = dirs[dir] || [];
     const indexHtml = indexTemplate(dir, label, dirPages, navFor, config);
     const outPath = path.join(outputDir, dir, 'index.html');
