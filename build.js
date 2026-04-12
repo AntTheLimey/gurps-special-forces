@@ -49,32 +49,38 @@ function main() {
   const navFor = generateNav(pages);
 
   // Render each page
+  let errorCount = 0;
   for (const page of pages) {
-    const processed = processContent(page, linkMap, config.excludeSections);
-    let html;
+    try {
+      const processed = processContent(page, linkMap, config.excludeSections);
+      let html;
 
-    switch (page.frontmatter.type) {
-      case 'pc': {
-        let filtered = stripDataview(page.markdown);
-        filtered = filterSections(filtered, config.excludeSections);
-        const sections = extractSections(filtered);
-        html = pcTemplate(page, processed, sections, navFor, config);
-        break;
+      switch (page.frontmatter.type) {
+        case 'pc': {
+          let filtered = stripDataview(page.markdown);
+          filtered = filterSections(filtered, config.excludeSections);
+          const sections = extractSections(filtered);
+          html = pcTemplate(page, processed, sections, navFor, config);
+          break;
+        }
+        case 'npc':
+          html = npcTemplate(page, processed, navFor, config);
+          break;
+        case 'location':
+          html = locationTemplate(page, processed, navFor, config);
+          break;
+        default:
+          html = wikiTemplate(page, processed, navFor, config);
       }
-      case 'npc':
-        html = npcTemplate(page, processed, navFor, config);
-        break;
-      case 'location':
-        html = locationTemplate(page, processed, navFor, config);
-        break;
-      default:
-        html = wikiTemplate(page, processed, navFor, config);
-    }
 
-    const outPath = path.join(outputDir, page.outputPath);
-    ensureDir(outPath);
-    fs.writeFileSync(outPath, html);
-    console.log(`  wrote ${page.outputPath}`);
+      const outPath = path.join(outputDir, page.outputPath);
+      ensureDir(outPath);
+      fs.writeFileSync(outPath, html);
+      console.log(`  wrote ${page.outputPath}`);
+    } catch (e) {
+      errorCount++;
+      console.error(`  ERROR rendering ${page.outputPath}: ${e.message}`);
+    }
   }
 
   // Generate index pages for each output directory
@@ -99,7 +105,11 @@ function main() {
   fs.writeFileSync(path.join(outputDir, 'index.html'), landingHtml);
   console.log('  wrote index.html');
 
-  console.log('Done!');
+  if (errorCount > 0) {
+    console.log(`Done with ${errorCount} error(s).`);
+  } else {
+    console.log('Done!');
+  }
 }
 
 main();
