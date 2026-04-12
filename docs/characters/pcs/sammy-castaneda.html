@@ -66,7 +66,7 @@
   <div class="meta">
     <span><span class="label">Player</span> Jay S</span>
     <span><span class="label">Points</span> 200/200</span>
-    <span><span class="label">Background</span> Special Operations Soldier</span>
+    <span><span class="label">Background</span> US Navy SEAL</span>
     <span><span class="label">Status</span> alive</span>
   </div>
 </div>
@@ -77,7 +77,10 @@
 <a href="#quirks-5-pts">Quirks [-5 pts]</a>
 <a href="#skills">Skills</a>
 <a href="#point-summary">Point Summary</a>
-<a href="#notes">Notes</a></nav>
+<a href="#notes">Notes</a>
+<a href="#speed-range-table">Speed/Range Table</a>
+<a href="#multi-action-combat-skill-chains">Multi-Action Combat Skill Chains</a>
+<a href="#combat-summary">Combat Summary</a></nav>
 
 <div class="accordion" id="attributes-140-pts">
   <button class="accordion-header" aria-expanded="false" onclick="const o=this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',o)">Attributes [140 pts]</button>
@@ -1035,13 +1038,763 @@
 <li><strong>Breadth over depth:</strong> Nearly all skills at 1 point — Sammy knows a little about everything and a lot about violence. His DX 14 carries most physical skills to respectable levels.</li>
 <li><strong>Reputation:</strong> Known to be savage and indiscriminate in killing — this precedes him and affects reactions negatively.</li>
 </ul>
+<hr>
+
+  </div>
+</div>
+
+<div class="accordion" id="speed-range-table">
+  <button class="accordion-header" aria-expanded="false" onclick="const o=this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',o)">Speed/Range Table</button>
+  <div class="accordion-body">
+    <p><em>GURPS B p.550. The single most-referenced table in ranged combat. Memorise the first five entries.</em></p>
+<table>
+<thead>
+<tr>
+<th>Range (yards)</th>
+<th>Modifier</th>
+<th>Typical Situation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>Point blank — across a room</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-1</td>
+<td>Close quarters — hallway</td>
+</tr>
+<tr>
+<td>5</td>
+<td>-2</td>
+<td>Room-length engagement</td>
+</tr>
+<tr>
+<td>7</td>
+<td>-3</td>
+<td>Across a large room / street</td>
+</tr>
+<tr>
+<td>10</td>
+<td>-4</td>
+<td>Down a corridor</td>
+</tr>
+<tr>
+<td>15</td>
+<td>-5</td>
+<td>Across a courtyard</td>
+</tr>
+<tr>
+<td>20</td>
+<td>-6</td>
+<td>Parking lot engagement</td>
+</tr>
+<tr>
+<td>30</td>
+<td>-7</td>
+<td>Short outdoor range</td>
+</tr>
+<tr>
+<td>50</td>
+<td>-8</td>
+<td>Standard rifle engagement</td>
+</tr>
+<tr>
+<td>70</td>
+<td>-9</td>
+<td>Open ground</td>
+</tr>
+<tr>
+<td>100</td>
+<td>-10</td>
+<td>Long-range rifle</td>
+</tr>
+</tbody>
+</table>
+<h3>Sammy’s Practical Accuracy — Pistols (Acc 2 typical)</h3>
+<table>
+<thead>
+<tr>
+<th>Turns Aiming</th>
+<th>Bonus</th>
+<th>With Pistol (Acc 2)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 (snap shot)</td>
+<td>+0</td>
+<td>14 at 2 yds</td>
+<td>No aiming penalty for pistols at point blank</td>
+</tr>
+<tr>
+<td>1</td>
+<td>+Acc</td>
+<td>+2 (eff. 16 at 2 yds)</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>+Acc +1</td>
+<td>+3</td>
+<td></td>
+</tr>
+<tr>
+<td>3+</td>
+<td>+Acc +2</td>
+<td>+4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Sammy at 7 yds snap shot: 14 - 3 = 11. At 15 yds: 14 - 5 = 9. Aimed at 7 yds: 14 + 2 - 3 = 13.</em>
+<em>SM -1 means enemies take -1 to hit Sammy at range — small target.</em></p>
+<h3>Sammy’s Practical Accuracy — Rifle (Acc 4 typical)</h3>
+<table>
+<thead>
+<tr>
+<th>Turns Aiming</th>
+<th>Bonus</th>
+<th>With Rifle (Acc 4)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 (snap shot)</td>
+<td>+0</td>
+<td>14 at 2 yds</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>+Acc</td>
+<td>+4 (eff. 18 at 2 yds)</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>+Acc +1</td>
+<td>+5</td>
+<td></td>
+</tr>
+<tr>
+<td>3+</td>
+<td>+Acc +2</td>
+<td>+6</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Sammy aimed at 50 yds with rifle: 14 + 4 - 8 = 10. At 100 yds: 14 + 4 - 10 = 8.</em></p>
+<h3>Dual-Weapon Attack — Practical Accuracy</h3>
+<p>Dual-Weapon Attack (Guns/Pistol) is at level 11. This lets Sammy fire both pistols in the same turn. Each shot is rolled separately at 11, minus range penalties.</p>
+<table>
+<thead>
+<tr>
+<th>Range (yds)</th>
+<th>Per-Gun Skill</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>11</td>
+<td>Point blank dual-fire</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10</td>
+<td>Close quarters</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9</td>
+<td>Room-length — starting to push it</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>Across a room — risky with both guns</td>
+</tr>
+</tbody>
+</table>
+<p><em>Dual-Weapon Attack is most effective at close range. At 7+ yards, consider switching to single aimed shots.</em></p>
+<hr>
+
+  </div>
+</div>
+
+<div class="accordion" id="multi-action-combat-skill-chains">
+  <button class="accordion-header" aria-expanded="false" onclick="const o=this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',o)">Multi-Action Combat Skill Chains</button>
+  <div class="accordion-body">
+    <p><em>Common tactical sequences Sammy would use in play. Each “chain” lists the maneuvers, rolls, and order for a multi-turn combat action. References: GURPS Basic Set — Campaigns, Chapters 11-13.</em></p>
+<h3>Chain 1: Dual-Pistol Engagement — Signature Move (1-Turn)</h3>
+<p><strong>Situation:</strong> Two targets at close range. Sammy draws both pistols and lets rip. His calling card.</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>Maneuver</th>
+<th>Action</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Attack</td>
+<td>Dual-Weapon Attack — fire both pistols at separate targets</td>
+<td>DWA (Guns/Pistol) 11 - range mod each</td>
+<td>Two separate attacks at 11. Each target defends separately.</td>
+</tr>
+</tbody>
+</table>
+<p><em>At 2 yds: two attacks at 11 each. At 5 yds: two attacks at 9 each. The probability of hitting BOTH targets drops off fast beyond 5 yards.</em>
+<em>Reloading: Sammy must holster/drop one pistol to reload the other, or carry pre-loaded spares.</em></p>
+<h3>Chain 2: Aimed Rifle Shot — Precision Kill (2-Turn)</h3>
+<p><strong>Situation:</strong> Single target at medium range. Sammy switches to precision mode.</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>Maneuver</th>
+<th>Action</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Aim</td>
+<td>Aim rifle at target</td>
+<td>—</td>
+<td>Gain +Acc (typically +4). Can take a Step.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Attack</td>
+<td>Fire aimed shot</td>
+<td>Guns (Rifle) 14 + 4 Acc - range mod</td>
+<td>Single precise shot.</td>
+</tr>
+</tbody>
+</table>
+<p><em>At 20 yds: 14 + 4 - 6 = 12. At 50 yds: 14 + 4 - 8 = 10. Sammy is a competent marksman when he takes his time.</em></p>
+<h3>Chain 3: Close-Quarters Brawl — Bar Fight Mode (Multi-Turn)</h3>
+<p><strong>Situation:</strong> Sammy gets into a close-quarters fight. He’s fast, tough, and fights dirty.</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>Maneuver</th>
+<th>Action</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Attack</td>
+<td>Brawling punch</td>
+<td>14</td>
+<td>Thr-1 cr = 1d-1 cr. Parry 11 (with CR).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Attack</td>
+<td>Knee/kick (Brawling)</td>
+<td>12</td>
+<td>Brawling-2. Thr cr = 1d cr. Reach C,1.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Attack</td>
+<td>Wrestling grapple</td>
+<td>13</td>
+<td>Initiate grapple → follow up with choke/pin. Parry 10 (with CR).</td>
+</tr>
+<tr>
+<td>Alt</td>
+<td>Attack</td>
+<td>Knife thrust/slash</td>
+<td>14</td>
+<td>Thr-1 imp (thrust) or Sw-1 cut (slash). Parry 10 (with CR).</td>
+</tr>
+</tbody>
+</table>
+<p><em>Sammy’s ST 14 gives him punishing unarmed damage for his size. High Pain Threshold means he never takes shock penalties — he keeps swinging when others flinch.</em></p>
+<h3>Chain 4: Garrote — Silent Kill (2-3 Turn)</h3>
+<p><strong>Situation:</strong> Sentry removal or assassination. Approach from behind, garrote applied.</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>Maneuver</th>
+<th>Action</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Attack</td>
+<td>Approach (Stealth 13) + Garrote attack from behind</td>
+<td>Garrote 14</td>
+<td>If unaware target: no active defense. Contest each turn.</td>
+</tr>
+<tr>
+<td>2+</td>
+<td>—</td>
+<td>Maintain garrote — Quick Contest</td>
+<td>Garrote 14 or ST 14 vs victim’s ST or HT</td>
+<td>Victim loses 1 FP per turn Sammy wins. At 0 FP → unconscious.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Sammy’s Garrote at 14 and ST 14 make this very effective. Combined with Stealth 13, he’s a capable silent killer. Less Sleep 5 means he’s awake on watch when others aren’t.</em></p>
+<h3>Chain 5: Danger Sense → Ambush Avoidance (Passive)</h3>
+<p><strong>Situation:</strong> The team is walking into a trap. Sammy’s Danger Sense fires.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What Happens</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GM Check</td>
+<td>GM secretly rolls Sammy’s Per (or IQ)</td>
+<td>Per 10 or IQ 10</td>
+<td>Danger Sense triggers automatically — no action required from Sammy</td>
+</tr>
+<tr>
+<td>On Success</td>
+<td>Sammy gets a warning — “something’s wrong”</td>
+<td>—</td>
+<td>+1 to defense/dodge on the first turn of the ambush. Can shout a warning to the team.</td>
+</tr>
+<tr>
+<td>Combat Reflexes</td>
+<td>Sammy never freezes</td>
+<td>—</td>
+<td>+6 to recover from mental stun, +1 all active defenses, +2 Fright Check</td>
+</tr>
+</tbody>
+</table>
+<p><em>This is Sammy’s most important team contribution outside combat — his supernatural early warning system. Danger Sense + Combat Reflexes + Combat Sense (psionic) means the team is very hard to ambush when Sammy is on point.</em></p>
+<h3>Chain 6: Psionic Combat Sense — Tactical Awareness (Active)</h3>
+<p><strong>Situation:</strong> Sammy uses Combat Sense to gain a read on the tactical situation.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Action</th>
+<th>Skill</th>
+<th>Target</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Concentrate</td>
+<td>Focus psionic awareness</td>
+<td>Combat Sense</td>
+<td>9</td>
+<td>ESP/Probability Alteration — gain vague awareness of tactical threats</td>
+</tr>
+<tr>
+<td>2. Interpret</td>
+<td>Parse the information</td>
+<td>—</td>
+<td>—</td>
+<td>GM provides cryptic or partial information based on margin of success</td>
+</tr>
+</tbody>
+</table>
+<p><em>Combat Sense at 9 isn’t reliable — succeeds ~38% of the time. But when it works, it’s invaluable. Upgrade path: improve to 11-12 for regular use.</em></p>
+<h3>Chain 7: Escape &amp; Evasion — Captured (Extended)</h3>
+<p><strong>Situation:</strong> Sammy is restrained or captured. His Escape skill and small size come into play.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Action</th>
+<th>Skill</th>
+<th>Target</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Assess</td>
+<td>Check restraints</td>
+<td>Escape 12 or Lockpicking 9</td>
+<td>12/9</td>
+<td>Determine method of restraint</td>
+</tr>
+<tr>
+<td>2. SM Bonus</td>
+<td>Use small size</td>
+<td>—</td>
+<td>+1 from SM -1</td>
+<td>Dwarfism makes Sammy harder to restrain — smaller wrists, more wiggle room</td>
+</tr>
+<tr>
+<td>3. Escape</td>
+<td>Work free</td>
+<td>Escape 12 (+1 SM) = effective 13</td>
+<td>13</td>
+<td>Or Slip Handcuffs technique at 7 for cuffs specifically</td>
+</tr>
+<tr>
+<td>4. Evade</td>
+<td>Stealth away</td>
+<td>Stealth 13 + Shadowing 9 (+2 in crowds)</td>
+<td>13/11</td>
+<td>Small, easily lost in a crowd</td>
+</tr>
+</tbody>
+</table>
+<p><em>Sammy’s Dwarfism is an asset here — SM -1 gives +1 to Escape attempts. Combined with Escape 12 and Less Sleep 5 (wait for the guards to doze), he’s slippery.</em></p>
+<h3>Chain 8: Vehicle Pursuit — Driving Combat (Multi-Turn)</h3>
+<p><strong>Situation:</strong> Chase scene in vehicles. Sammy drives with one hand, shoots with the other.</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>Maneuver</th>
+<th>Action</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Attack</td>
+<td>Drive + fire pistol out window</td>
+<td>Driving 13 (control) + Guns (Pistol) 14 - range - penalties</td>
+<td>-4 for firing from a moving vehicle (typical).</td>
+</tr>
+<tr>
+<td>Alt</td>
+<td>Concentrate</td>
+<td>Combat Driving technique</td>
+<td>Combat Driving 13</td>
+<td>Evasive driving under fire.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Sammy’s DX 14 makes him a capable wheelman, and his pistol skills translate to vehicle combat better than most. At close range (2 yds, pursuit): 14 - 4 (vehicle) = 10.</em></p>
+<h3>Chain 9: Knife Kill — Close Quarters Decisive (1-2 Turn)</h3>
+<p><strong>Situation:</strong> Knife drawn, enemy in reach. Sammy goes for the kill.</p>
+<table>
+<thead>
+<tr>
+<th>Turn</th>
+<th>Maneuver</th>
+<th>Action</th>
+<th>Roll</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Attack</td>
+<td>Knife thrust (vitals -3 or neck -5)</td>
+<td>Knife 14 - 3 = 11 (vitals) or 14 - 5 = 9 (neck)</td>
+<td>Vitals: x3 damage. Neck: x2 cutting.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Attack</td>
+<td>Follow-up slash or thrust</td>
+<td>Knife 14</td>
+<td>If first attack hit vitals for x3, target may be down.</td>
+</tr>
+</tbody>
+</table>
+<p><em>With ST 14, Sammy’s knife does Thr-1 imp = 1d-1 impaling or Sw-1 cut = 1d+1 cutting (ST 14 thrust = 1d, swing = 2d). Vitals hit: (1d-1)×3 = 0-15 injury. Lethal.</em></p>
+<hr>
+
+  </div>
+</div>
+
+<div class="accordion" id="combat-summary">
+  <button class="accordion-header" aria-expanded="false" onclick="const o=this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',o)">Combat Summary</button>
+  <div class="accordion-body">
+    <h3>Active Defenses</h3>
+<table>
+<thead>
+<tr>
+<th>Defense</th>
+<th>Base</th>
+<th>With CR</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dodge</td>
+<td>10</td>
+<td><strong>11</strong></td>
+<td>Purchased +1, +1 CR. -1 per encumbrance level</td>
+</tr>
+<tr>
+<td>Parry (Brawling)</td>
+<td>10</td>
+<td><strong>11</strong></td>
+<td>Brawling 14/2 + 3 = 10</td>
+</tr>
+<tr>
+<td>Parry (Boxing)</td>
+<td>9</td>
+<td><strong>10</strong></td>
+<td>Boxing 13/2 + 3 = 9</td>
+</tr>
+<tr>
+<td>Parry (Judo)</td>
+<td>9</td>
+<td><strong>10</strong></td>
+<td>Judo 12/2 + 3 = 9; can parry weapons at -3</td>
+</tr>
+<tr>
+<td>Parry (Knife)</td>
+<td>9</td>
+<td><strong>10</strong></td>
+<td>Knife 14/2 + 3 - 1 (weapon) = 9</td>
+</tr>
+<tr>
+<td>Parry (Wrestling)</td>
+<td>9</td>
+<td><strong>10</strong></td>
+<td>Wrestling 13/2 + 3 = 9</td>
+</tr>
+</tbody>
+</table>
+<h3>Unarmed Strikes</h3>
+<table>
+<thead>
+<tr>
+<th>Attack</th>
+<th>Skill</th>
+<th>Damage</th>
+<th>Reach</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Punch (Brawling)</td>
+<td>14</td>
+<td>1d-1 cr</td>
+<td>C</td>
+<td>thr-1. No Brawling bonus (needs DX+2 = 16).</td>
+</tr>
+<tr>
+<td>Kick (Brawling)</td>
+<td>12</td>
+<td>1d cr</td>
+<td>C,1</td>
+<td>Brawling-2; thr.</td>
+</tr>
+<tr>
+<td>Punch (Boxing)</td>
+<td>13</td>
+<td>1d-1 cr</td>
+<td>C</td>
+<td>No Boxing bonus (needs DX+1 = 15). Parry 10 w/CR.</td>
+</tr>
+<tr>
+<td>Knee/Elbow</td>
+<td>14</td>
+<td>1d-1 cr</td>
+<td>C</td>
+<td>Brawling; close combat strikes.</td>
+</tr>
+</tbody>
+</table>
+<h3>Grappling</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Skill</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrestling Grapple</td>
+<td>13</td>
+<td>Initiate grapple; ST 14 gives good control</td>
+</tr>
+<tr>
+<td>Judo Grapple</td>
+<td>12</td>
+<td>Can parry weapons at -3</td>
+</tr>
+<tr>
+<td>Judo Throw</td>
+<td>12</td>
+<td>Trip/slam opponent</td>
+</tr>
+</tbody>
+</table>
+<h3>Ranged Combat</h3>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Skill</th>
+<th>Snap Shot (2 yds)</th>
+<th>Aimed (2 yds)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pistol (×2)</td>
+<td>14</td>
+<td>14</td>
+<td>16</td>
+<td>Primary weapons; see DWA for dual-fire</td>
+</tr>
+<tr>
+<td>Rifle</td>
+<td>14</td>
+<td>14</td>
+<td>18</td>
+<td>Standard infantry weapon</td>
+</tr>
+<tr>
+<td>Pistol (DWA, each gun)</td>
+<td>11</td>
+<td>11 at 2 yds</td>
+<td>—</td>
+<td>Dual-Weapon Attack; no aiming</td>
+</tr>
+</tbody>
+</table>
+<h3>Key Combat Edges</h3>
+<table>
+<thead>
+<tr>
+<th>Edge</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No shock penalties ever</td>
+<td>High Pain Threshold</td>
+</tr>
+<tr>
+<td>+3 to resist knockdown/stun</td>
+<td>High Pain Threshold</td>
+</tr>
+<tr>
+<td>+1 all active defenses</td>
+<td>Combat Reflexes</td>
+</tr>
+<tr>
+<td>+6 to recover from surprise</td>
+<td>Combat Reflexes</td>
+</tr>
+<tr>
+<td>+2 Fright Checks (total 12)</td>
+<td>Combat Reflexes</td>
+</tr>
+<tr>
+<td>Never freezes</td>
+<td>Combat Reflexes</td>
+</tr>
+<tr>
+<td>Supernatural danger warning</td>
+<td>Danger Sense</td>
+</tr>
+<tr>
+<td>Psionic combat awareness</td>
+<td>Combat Sense 9</td>
+</tr>
+<tr>
+<td>-1 for enemies to hit at range</td>
+<td>SM -1 (Dwarfism)</td>
+</tr>
+<tr>
+<td>Only 3 hours sleep needed</td>
+<td>Less Sleep 5</td>
+</tr>
+</tbody>
+</table>
+<h3>Key Weaknesses</h3>
+<table>
+<thead>
+<tr>
+<th>Weakness</th>
+<th>Source</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Must kill — won’t take prisoners</td>
+<td>Bloodlust</td>
+<td>Self-control roll to show mercy</td>
+</tr>
+<tr>
+<td>No empathy for suffering</td>
+<td>Callous</td>
+<td>-1 reactions, -3 Teaching, poor at comforting</td>
+</tr>
+<tr>
+<td>Can’t resist investigating</td>
+<td>Curious</td>
+<td>Self-control roll to walk away from mysteries</td>
+</tr>
+<tr>
+<td>Noticeably small</td>
+<td>Dwarfism (SM -1)</td>
+<td>-2 Disguise, -1 Basic Move</td>
+</tr>
+<tr>
+<td>Compelled toward romance</td>
+<td>Lecherousness</td>
+<td>Self-control roll required; can compromise missions</td>
+</tr>
+<tr>
+<td>Known as a savage</td>
+<td>Reputation -1</td>
+<td>-1 reactions from those who’ve heard</td>
+</tr>
+<tr>
+<td>Attracts supernatural weirdness</td>
+<td>Weirdness Magnet</td>
+<td>GM magnet for strange events — out of player’s control</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
   </div>
 </div>
 <h2>Relationships</h2>
 <ul class="relationship-list">
-<li><strong class="rel-label">Assigned to</strong> <a href="../../factions/voss-dynamics.html" class="entity-link">The Defense Contractor</a> &mdash; Assigned to the defense contractor program as a special operations asset</li>
-<li><strong class="rel-label">Member of</strong> <a href="../../factions/the-team.html" class="entity-link">The Team</a> &mdash; Operator on the contractor team — small, savage, and supernaturally aware</li>
+<li><strong class="rel-label">Assigned to</strong> <a href="../../factions/voss-dynamics.html" class="entity-link">The Defense Contractor</a> &mdash; Assigned to the defense contractor program from the US Navy SEALs</li>
+<li><strong class="rel-label">Member of</strong> <a href="../../factions/the-team.html" class="entity-link">The Team</a> &mdash; SEAL operator on the contractor team — small, savage, and supernaturally aware</li>
 <li><strong class="rel-label">Operates with</strong> <a href="ronnie-vint.html" class="entity-link">Ronnie Vint</a> &mdash; Fellow contractor operator</li>
 <li><strong class="rel-label">Operates with</strong> <a href="jens-hartmann.html" class="entity-link">Jens Hartmann</a> &mdash; Fellow contractor operator</li>
 <li><strong class="rel-label">Operates with</strong> <a href="guy-lefleur.html" class="entity-link">Guy LeFleur</a> &mdash; Fellow contractor operator</li>
