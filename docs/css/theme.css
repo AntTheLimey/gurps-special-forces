@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap');
+
+:root {
+  --theme-primary: #1a2332;
+  --theme-accent: #b8962e;
+  --theme-bg: #eef0f2;
+  --theme-text: #1a1a1a;
+  --theme-heading-font: 'Oswald', serif;
+  --theme-body-font: 'Source Sans Pro', sans-serif;
+}
