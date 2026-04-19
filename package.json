@@ -4,9 +4,10 @@
   "private": true,
   "description": "Static site generator for the GURPS Special Forces campaign vault",
   "scripts": {
-    "build": "gm-apprentice-publish build"
+    "build": "node build.js"
   },
   "dependencies": {
-    "gm-apprentice-publish": "^1.0.0"
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
   }
 }
