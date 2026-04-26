@@ -113,17 +113,23 @@
 
 <main class="content">
 
-<div class="char-header">
+<div class="char-header char-header-tabbed">
   <img src="../../images/characters/jens-hartmann.jpg" alt="Hartmann" class="portrait">
   <h1>Jens Hartmann</h1>
   <p class="concept">Demolitions expert, Combat diver, Pragmatic problem-solver, Compulsive fixer, Quietly indispensable</p>
   <div class="meta">
     <span><span class="label">Player</span> Sean</span>
-    <span><span class="label">Points</span> 200/200</span>
-    <span><span class="label">Background</span> KSK Operator (Kampfschwimmer / Combat Engineer)</span>
+    <span><span class="label">Occupation</span> KSK Operator (Kampfschwimmer / Combat Engineer)</span>
+    <span><span class="label">Age</span> 32</span>
+    <span><span class="label">Nationality</span> German</span>
     <span><span class="label">Status</span> alive</span>
   </div>
 </div>
+<div class="tab-bar">
+  <button class="pc-tab active" data-tab="sheet" onclick="switchTab('sheet')">Character Sheet</button>
+  <button class="pc-tab" data-tab="story" onclick="switchTab('story')">Story</button>
+</div>
+<div class="tab-panel active" id="tab-sheet">
 <nav class="section-nav" aria-label="Sheet sections"><a href="#attributes-100-pts">Attributes [100 pts]</a>
 <a href="#secondary-characteristics-10-pts">Secondary Characteristics [10 pts]</a>
 <a href="#advantages-55-pts">Advantages [55 pts]</a>
@@ -2468,6 +2474,35 @@
 <li><strong class="rel-label">Operates with</strong> <a href="sammy-castaneda.html" class="entity-link">Sammy Castaneda</a> &mdash; Fellow contractor operator — compact, savage, and oddly perceptive. Jens probably keeps an eye on him.</li>
 <li><strong class="rel-label">Member of</strong> <a href="../../factions/the-team.html" class="entity-link">The Team</a> &mdash; Assigned to the contractor team — the quiet professional among louder personalities.</li>
 </ul>
+</div>
+<div class="tab-panel" id="tab-story">
+  <div class="story-prose">
+    <h2>Session 01 — Operation Living Bomb</h2>
+<p>The limo ride from <a href="../../locations/las-vegas-airport.html">Las Vegas Airport</a> to the <a href="../../locations/voss-campus.html">Voss Campus</a> told Jens everything he needed to know about the team he had been assigned to. <a href="ronnie-vint.html">Ronnie</a> produced his own deck of cards and immediately tried to palm the aces, lost badly despite the rigged odds, then accused <a href="sammy-castaneda.html">Sammy</a> of cheating and swept the cards off the table in a fit of rage. <a href="guy-lefleur.html">Guy</a> said nothing, which meant he had seen the palming and was keeping it in his back pocket. Jens watched the entire sequence unfold from his seat, cataloguing personalities and calculating tolerances, the way he would assess the load-bearing capacity of a bridge he intended to drop. The poker game was instructive. The people were volatile. The engineering of a functional team from these raw materials was going to take work.</p>
+<p><a href="../npcs/adrian-voss.html">Adrian Voss</a> and <a href="../npcs/major-jenkins.html">Major Jenkins</a> delivered the briefing in a secure conference room at the <a href="../../locations/voss-campus.html">Voss Campus</a>: <a href="../../events/the-meteor-event.html">The Meteor Event</a>, the emergence of super-powered individuals, and a young man designated <a href="../npcs/the-exploding-man.html">The Exploding Man</a> who could walk into a market, detonate, and crawl away alive to do it again. The mission was live capture in a Taliban cave complex deep in the Afghan mountains, with a $100,000 bonus per operator for success. Before the team departed, <a href="../npcs/yi-jiangku.html">Yi Jiangku</a> — intense, sharp, radiating purpose — distributed three manila folders to various team members. The labels read “Hungry God,” “Toasty Titan,” and “Jens.” One of those folders carried his name. Nobody explained why, and the moment passed before he could press the question. It sat in the back of his mind like an unexploded ordnance that someone had forgotten to mark.</p>
+<p>The night insertion went cleanly — parachutes into the Afghan mountains, five kilometres out from the target. <a href="../npcs/major-jenkins.html">Major Jenkins</a> spotted a tripwire across the primary approach vector within minutes of landing. Jens moved forward without hesitation. In complete darkness, working by touch and the faint gradations his night-adapted eyes could parse, he traced the wire to its anchor points and disarmed the device with steady, precise hands. The same hands that had crimped detonators underwater in the Baltic, that had set limpet charges on ship hulls by feel alone. The tripwire was crude but effective, the kind of simple engineering that kills the overconfident. He respected it, neutralised it, and moved on. Deeper in, while <a href="guy-lefleur.html">Guy</a> deployed gas grenades into the lower chamber and <a href="ronnie-vint.html">Ronnie</a> secured <a href="../npcs/the-exploding-man.html">the target</a> with a rifle butt and restraints, Jens picked off a sentry at the rear cave entrance with a single pistol shot from nearly thirty yards — through darkness, through dust, through the residual haze of knockout gas. The P8 barked once. The sentry dropped. Surgical accuracy at a range where most operators would have hesitated to fire. During the helicopter exfiltration, four insurgents on <a href="../../items/flying-carpets.html">flying carpets</a> pursued the aircraft across the mountain passes. Guy and Ronnie handled the aerial engagement — grenades and .50 calibre — while Jens maintained overwatch from the cabin, tracking the remaining threats and covering arcs that the others had left exposed.</p>
+<p>Dawn found them at a NATO base in Afghanistan, the prisoner in medical custody, <a href="../npcs/major-jenkins.html">Major Jenkins</a> raising a glass of whiskey. The payout was $150,000 per operator. Jenkins delivered the real prize: <a href="../../items/voss-combat-suit.html">Voss Combat Suits</a>, identical to his own, waiting back at the campus. Jens accepted the news with the quiet satisfaction of an engineer who has just been told that the next project involves technology he has never seen before.</p>
+<h2>Session 02 — Terra-ble First Impressions</h2>
+<p>The debrief at <a href="../../locations/voss-campus.html">Voss Campus</a> was standard — <a href="guy-lefleur.html">Guy</a> delivered the operational summary at his usual rapid-fire pace, <a href="ronnie-vint.html">Ronnie</a> filled in the details about the target’s resistance to tranquiliser darts — and then Ronnie slapped a button that <a href="guy-lefleur.html">Guy</a> had placed on the conference table and the room filled with smooth jazz. The laughter broke something loose in the team. In the mess hall that evening, the operators settled into the kind of easy, sharp-tongued camaraderie that forms between people who have recently survived something that should have killed them. <a href="ronnie-vint.html">Ronnie</a> tormented <a href="../npcs/paul-bartender.html">Pauly</a> the bartender with requests for sausage rolls and scotch eggs. <a href="../npcs/terry-mu-oz.html">Terry Muñoz</a>, the nervous young cook, scrambled to keep up. Jens observed the social dynamics with the same methodical attention he applied to everything else, filing away the interpersonal architecture of the group — who pushed, who absorbed, who deflected.</p>
+<p>The suit fitting at R&amp;D Level -1 was the first time the engineering truly seized his attention. Four <a href="../../items/voss-combat-suit.html">Voss Combat Suits</a> hung on the wall — seven-foot exoskeletons of plated armour, powered by backpack-mounted energy cells rated for eighteen hours of continuous use. Jens provided suit familiarisation training to the other team members, walking them through the systems with the patient thoroughness of a man who had already spent hours studying the technical documentation and needed to understand every subsystem before he would trust the hardware in the field. While <a href="ronnie-vint.html">Ronnie</a> punched <a href="sammy-castaneda.html">Sammy</a>’s unoccupied suit across the room and <a href="guy-lefleur.html">Guy</a> tested communication links, Jens focused on understanding the base technology — the power distribution, the structural reinforcement, the interface between the wearer’s nervous system and the suit’s response architecture. He requested no additional stealth modifications, no bolt-on weapons systems. The suit itself was the puzzle. He intended to understand it completely before he started modifying it.</p>
+<p>Then <a href="../npcs/adrian-voss.html">Voss</a> led them down to <a href="../../locations/randd-level-2.html">R&amp;D Level -2</a>, through security that only he could authorise, to <a href="../../items/the-portal.html">The Portal</a>. A circular, wavy arch dominated the centre of the room, its surface shimmering like heat distortion. Built using meteor fragments. Linking, for reasons no one could explain, to a planet designated <a href="../../locations/terra.html">Terra</a>. The team stepped through and found a dead world — cracked earth, thin atmosphere, two suns hanging in an overcast sky. The suits compensated for the low oxygen without difficulty. Thirty minutes of jogging north brought them to a three-foot hole in a hillside where <a href="sammy-castaneda.html">Sammy</a> crawled in invisibly and found a <a href="../../creatures/terran-insectoid.html">car-sized insectoid creature</a> gnawing on a human femur. Further north, they found torn fatigues bearing the name <a href="../npcs/hernandez.html">Hernandez</a> — what remained of the previous recon team that had gone through the portal a month ago without powered suits and never returned. Then the <a href="../../locations/ruined-city-terra.html">ruined city</a> appeared on the plain below: crumbling concrete, exposed steel beams, three-legged furniture, three-wheeled vehicles with yoke controls, and at its centre a statue of a three-eyed, three-armed, three-legged humanoid holding a blade above its head. <a href="guy-lefleur.html">Guy</a> estimated the city had been destroyed by conventional weapons roughly a century ago. From a twelve-story building near the centre, the team watched two to three hundred <a href="../../creatures/terran-insectoid.html">giant insectoid creatures</a> digging methodically across the northern landscape.</p>
+<p>The portal was built using fragments. The alien world had drained fragments embedded in its soil, detectable on the suit sensors within fifty yards of the statue. An entire civilisation had risen and fallen on this world, and the fragments were here too — connecting two planets across a distance that conventional physics could not account for. The engineering questions were relentless. How did the portal maintain coherence? What was the energy source? Why did the fragments drain? What was the relationship between the alien technology and the materials that granted superhuman abilities on Earth? Jens sketched the statue in his field notebook, measured doorframes for the average height of the three-limbed inhabitants, recorded the composition of the building materials by visual assessment, and noted the directional orientation of every street relative to the two suns. His hands never stopped moving. His Leatherman came out to pry a circuit board fragment from a ruined console. The notebook filled with precise, annotated drawings — alien architecture, insectoid anatomy observed at distance, portal aperture dimensions from memory. The questions would not stop. The questions were the point. Understanding how the fragments worked — how any of this worked — was the reason he had volunteered for the programme, and now the scope of what he did not understand had expanded to include an entire dead planet and a civilisation that had been erased from it. Sleep, when it came, was brief and interrupted by calculations he could not finish.</p>
+
+  </div>
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.pc-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+  history.replaceState(null, '', '#' + tab);
+}
+(function() {
+  if (location.hash === '#story') switchTab('story');
+})();
+</script>
 </main>
 
 

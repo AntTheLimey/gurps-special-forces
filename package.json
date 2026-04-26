@@ -7,6 +7,6 @@
     "build": "gm-apprentice-publish build"
   },
   "dependencies": {
-    "gm-apprentice-publish": "^1.0.0"
+    "gm-apprentice-publish": "^1.1.1"
   }
 }
